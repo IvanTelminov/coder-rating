@@ -7,8 +7,13 @@ const coderStore = useCoderStore()
 </script>
 
 <template>
-  <el-button type="primary" plain>Primary</el-button>
   {{ coderStore.name }}
+
+  <el-link href="/home/" :underline="false">
+    <el-button type="primary" size="large">дом</el-button>
+  </el-link>
+
+  <router-view></router-view>
 </template>
 
 <style scoped>
