@@ -1,13 +1,18 @@
 <script setup>
-import axios from "axios";
+import { onMounted } from 'vue'
 import {useCoderStore} from "./stores/coder.js";
 
 const coderStore = useCoderStore()
-// axios.get("https://ya.ru")
+
+onMounted(async () => {
+  await coderStore.load()
+})
 </script>
 
 <template>
-  {{ coderStore.name }}
+  <ul>
+    <li v-for="c in coderStore.list">{{ c.name }}</li>
+  </ul>
 
   <el-link href="/home/" :underline="false">
     <el-button type="primary" size="large">дом</el-button>
