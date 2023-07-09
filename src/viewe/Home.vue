@@ -6,6 +6,7 @@ const coderStore = useCoderStore()
 
 onMounted(async () => {
   await coderStore.load()
+  console.log(coderStore.list)
 })
 </script>
 
@@ -14,10 +15,9 @@ onMounted(async () => {
     <li v-for="c in coderStore.list">{{ c.name }}</li>
   </ul>
 
-  <el-link href="/" :underline="false">
-    <el-button type="primary" size="large">дом</el-button>
+  <el-link href="/elplus/" :underline="false">
+    <el-button type="primary" size="large">ElementPlus</el-button>
   </el-link>
-
 </template>
 
 <style scoped>
