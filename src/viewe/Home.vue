@@ -10,6 +10,7 @@ onMounted(async () => {
 </script>
 
 <template>
+
   <el-table :data="coderStore.list" border style="width: 100%">
     <el-table-column prop="avatar" label="" width="130" >
       <template #default="scope">
