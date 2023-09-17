@@ -3,8 +3,7 @@
 </script>
 
 <template>
-  <h1>Coder rating</h1>
-  <router-view></router-view>
+  <h2>Profile</h2>
 </template>
 
 <style scoped>
